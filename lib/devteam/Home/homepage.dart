@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:prima_applicazione/devteam/Profilo/profilo.dart';
+import 'package:prima_applicazione/devteam/splash.dart';
 import 'myButton.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,7 +29,7 @@ class HomePage extends StatelessWidget {
                         // Azione da eseguire quando il pulsante viene premuto
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const HomePage())
+                            MaterialPageRoute(builder: (context) => const Splash())
                         );
                       },
                       name: 'AIUTO',
@@ -48,8 +51,10 @@ class HomePage extends StatelessWidget {
                     MyButton(
                       text: 'iconaMappa.png',
                       onPressed: () {
-                        // Azione da eseguire quando il pulsante viene premuto
-                        print('Pulsante premuto!');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage())
+                        );
                       },
                       name: 'MAPPA',
                     ),
@@ -78,8 +83,10 @@ class HomePage extends StatelessWidget {
                     MyButton(
                       text: 'iconaProfilo.png',
                       onPressed: () {
-                        // Azione da eseguire quando il pulsante viene premuto
-                        print('Pulsante premuto!');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const ProfiloPage(profileName: "Mario Rossi",))
+                        );
                       },
                       name: 'PROFILO',
                     ),
