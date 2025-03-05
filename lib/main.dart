@@ -7,6 +7,7 @@ import 'package:prima_applicazione/login/loginpage.dart';
 import 'devteam/profilo.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'devteam/Home/homepage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
