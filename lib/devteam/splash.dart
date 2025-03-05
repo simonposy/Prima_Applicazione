@@ -48,10 +48,10 @@ class _MySplashState extends State<MySplash> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text('Superior University',
-              style: TextStyle(color: Colors.white, fontSize: 30, font),),
+              style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
               Text('e-Learning Platform',
-              style: TextStyle(color: Colors.white, fontSize: 20)),
-              SizedBox(height: 450),
+              style: TextStyle(color: Colors.white, fontSize: 22)),
+              SizedBox(height: 400),
               Text('Copyright © 2022 Superior University',
               style: TextStyle(color: Colors.white),),
               Text('All Right Reserved',
