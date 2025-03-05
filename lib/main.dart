@@ -6,6 +6,7 @@ import 'package:prima_applicazione/login/loginpage.dart';
 import 'devteam/profilo.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'devteam/Home/homepage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
       ),
-      home: const ProfiloPage(title: 'Profilo'),
+      home: const MyHomePage(title: 'QuickCare'),
     );
   }
 }
