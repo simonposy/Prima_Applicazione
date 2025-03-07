@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:prima_applicazione/Mappa/mappa.dart';
 
 import 'package:prima_applicazione/devteam/Profilo/profilo.dart';
 import 'package:prima_applicazione/devteam/splash.dart';
+import 'package:prima_applicazione/login/loginpage.dart';
 import 'myButton.dart';
 
 class HomePage extends StatelessWidget {
@@ -53,7 +55,7 @@ class HomePage extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => HomePage())
+                            MaterialPageRoute(builder: (context) => Mappa())
                         );
                       },
                       name: 'MAPPA',
@@ -61,8 +63,10 @@ class HomePage extends StatelessWidget {
                     MyButton(
                       text: 'iconaCalendario.png',
                       onPressed: () {
-                        // Azione da eseguire quando il pulsante viene premuto
-                        print('Pulsante premuto!');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage())
+                        );
                       },
                       name: 'CALENDARIO',
                     ),

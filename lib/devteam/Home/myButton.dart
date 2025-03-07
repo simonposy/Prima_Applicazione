@@ -6,7 +6,8 @@ class MyButton extends StatelessWidget {
   final String name;
 
   MyButton({required this.text, required this.onPressed, required this.name});
-
+  //Come parametri ha bisogno di un testo con il nome del file dell icona che vogliamo inserire
+  // una funzione di ciò che fa quando premuto,e un testo scritto sotto il pulsante
   @override
   Widget build(BuildContext context) {
     return Column(
