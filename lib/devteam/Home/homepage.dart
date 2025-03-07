@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prima_applicazione/Mappa/mappa.dart';
+import 'package:prima_applicazione/Questionario/Questionario.dart';
 
 import 'package:prima_applicazione/devteam/Profilo/profilo.dart';
 import 'package:prima_applicazione/devteam/splash.dart';
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
                         // Azione da eseguire quando il pulsante viene premuto
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const Splash())
+                            MaterialPageRoute(builder: (context) => const Questionario())
                         );
                       },
                       name: 'AIUTO',
