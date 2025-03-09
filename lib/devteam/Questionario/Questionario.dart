@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prima_applicazione/Questionario/risultato.dart';
+import 'package:prima_applicazione/devteam/Questionario/risultato.dart';
 import 'mySceltaButton.dart';
 
 class Questionario extends StatefulWidget {
