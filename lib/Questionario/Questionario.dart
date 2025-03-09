@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prima_applicazione/Questionario/risultato.dart';
 import 'mySceltaButton.dart';
 
 class Questionario extends StatefulWidget {
@@ -10,18 +11,28 @@ class Questionario extends StatefulWidget {
 }
 
 class _QuestionarioState extends State<Questionario> {
+  List<String> risultati = [
+    "Ingegneria",
+    "Psicologia",
+    "Matematica",
+    "Lettere e Comunicazione",
+    "Medicina",
+    "Informatica",
+    "Elettronica e Meccanica",
+    "Design e Tecnologia"
+  ];
   List<Map<String, dynamic>> domande = [
     {
       'domanda': 'Quale tipo di problema ti piace risolvere di più?',
       'opzioni': [
-        'Capire come funzionano le cose e migliorare i processi (Ingegneria)',
-        'Analizzare il comportamento umano e sociale (Psicologia)',
-        'Esplorare concetti astratti e teorie logiche (Matematica)',
-        'Creare e comunicare nuove idee (Lettere, Comunicazione)',
-        'Studiare il funzionamento del corpo umano (Medicina)',
-        'Lavorare con tecnologie innovative (Informatica)',
-        'Progettare sistemi complessi (Elettronica, Meccanica)',
-        'Migliorare la vita quotidiana delle persone (Tecnologia, Design)'
+        'Capire come funzionano le cose e migliorare i processi ',//(Ingegneria)
+        'Analizzare il comportamento umano e sociale ',//(Psicologia)
+        'Esplorare concetti astratti e teorie logiche ',//(Matematica)
+        'Creare e comunicare nuove idee ',//(Lettere, Comunicazione)
+        'Studiare il funzionamento del corpo umano ',//(Medicina)
+        'Lavorare con tecnologie innovative ',//(Informatica)
+        'Progettare sistemi complessi ',//(Elettronica, Meccanica)
+        'Migliorare la vita quotidiana delle persone '//(Tecnologia, Design)
       ]
     },
     {
@@ -77,19 +88,38 @@ class _QuestionarioState extends State<Questionario> {
       ]
     }
   ];
-  List<int> punti =List.filled(5,0);
+  List<int> punti =List.filled(8,0);
   int domandaind=0;
-
-  void scelta() {
+  int indMax=0;
+  bool Finito=false;
+  void scelta(int i) {
     setState(() {
-      if(domandaind< 5-1){
+      punti[i]++;
+      if(domandaind< domande.length-1){
       domandaind++;
       }
       else{
-
+        Finito=true;
+        int ansInd = Trova();
+        String ans = risultati[ansInd];
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Risultato(ans: ans))
+        );
+        print(risultati[ansInd]);
       }
     });
   }
+
+  int Trova(){
+    for(int i=0; i<punti.length;i++){
+      if(punti[i]>punti[indMax]){
+        indMax=i;
+      }
+    }
+    return indMax;
+  }
+
 
   @override
   Widget build(BuildContext context) {

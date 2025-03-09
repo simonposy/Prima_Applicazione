@@ -3,7 +3,7 @@ import 'package:prima_applicazione/Mappa/mappa.dart';
 import 'package:prima_applicazione/Questionario/Questionario.dart';
 
 import 'package:prima_applicazione/devteam/Profilo/profilo.dart';
-import 'package:prima_applicazione/devteam/splash.dart';
+import 'package:prima_applicazione/Splash/splash.dart';
 import 'package:prima_applicazione/login/loginpage.dart';
 import 'myButton.dart';
 

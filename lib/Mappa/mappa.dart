@@ -65,7 +65,7 @@ class _MappaState extends State<Mappa> {
         onMapCreated: _onMapCreated,
         initialCameraPosition: _initialPosition,
         markers: _markers,
-        onTap: (LatLng location) {
+      /*  onTap: (LatLng location) {
           setState(() {
             // Aggiungi un marker quando l'utente tocca la mappa
             _markers.add(Marker(
@@ -74,7 +74,7 @@ class _MappaState extends State<Mappa> {
               infoWindow: const InfoWindow(title: 'Nuovo Marker'),
             ));
           });
-        },
+        },*/
       ),
     );
   }
