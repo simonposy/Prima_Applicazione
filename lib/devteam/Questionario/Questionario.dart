@@ -102,7 +102,7 @@ class _QuestionarioState extends State<Questionario> {
         Finito=true;
         int ansInd = Trova();
         String ans = risultati[ansInd];
-        Navigator.push(
+        Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => Risultato(ans: ans))
         );
