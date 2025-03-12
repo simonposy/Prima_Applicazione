@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prima_applicazione/devteam/Calendario/Caledario.dart';
 import 'package:prima_applicazione/devteam/Mappa/mappa.dart';
 import 'package:prima_applicazione/devteam/Questionario/Questionario.dart';
+import 'package:prima_applicazione/devteam/ChiSiamo/ChiSiamo.dart';
 
 import 'package:prima_applicazione/devteam/Profilo/profilo.dart';
 import 'package:prima_applicazione/devteam/Splash/splash.dart';
@@ -93,8 +94,10 @@ class HomePage extends StatelessWidget {
                     MyButton(
                       text: 'iconaChiSiamo.png',
                       onPressed: () {
-                        // Azione da eseguire quando il pulsante viene premuto
-                        print('Pulsante premuto!');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ChiSiamoPage())
+                        );
                       },
                       name: 'CHI SIAMO?',
                     ),
