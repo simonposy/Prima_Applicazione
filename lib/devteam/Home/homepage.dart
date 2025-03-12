@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prima_applicazione/Calendario/Caledario.dart';
 import 'package:prima_applicazione/devteam/Mappa/mappa.dart';
 import 'package:prima_applicazione/devteam/Questionario/Questionario.dart';
 
@@ -22,6 +23,18 @@ class HomePage extends StatelessWidget {
               spacing: 20,
 
               children: [
+                Column(
+                  children: [
+                    SizedBox(
+                      child: Text("UNI-MATE",
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.w900,
+                        ) ,
+                      ),
+                    ),
+                  ],
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   spacing: 30,
@@ -66,7 +79,7 @@ class HomePage extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => LoginPage())
+                            MaterialPageRoute(builder: (context) => const Calendario())
                         );
                       },
                       name: 'CALENDARIO',
