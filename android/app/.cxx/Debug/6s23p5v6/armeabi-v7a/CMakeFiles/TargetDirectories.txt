@@ -1,0 +1,2 @@
+C:/Users/Giov/Documents/GitHub/Prima_Applicazione/android/app/.cxx/Debug/6s23p5v6/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Giov/Documents/GitHub/Prima_Applicazione/android/app/.cxx/Debug/6s23p5v6/armeabi-v7a/CMakeFiles/rebuild_cache.dir
