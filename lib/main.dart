@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:prima_applicazione/MyButton.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:prima_applicazione/codegenius/GoogleAccessRegistration.dart';
+import 'package:prima_applicazione/codegenius/UserRegistration.dart';
+import 'package:prima_applicazione/codegenius/LoginSelector.dart';
 import 'package:prima_applicazione/login/loginpage.dart';
-import 'devteam/profilo.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:prima_applicazione/codegenius/Home.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -19,11 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
       ),
-      home: const ProfiloPage(title: 'Profilo'),
+      home: const Home(),
     );
   }
 }
