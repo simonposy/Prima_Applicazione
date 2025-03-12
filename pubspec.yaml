@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   firebase_core: ^3.12.1
   firebase_auth: ^5.5.1
+  google_maps_flutter: ^2.10.1  # Per l'integrazione di Google Maps su mobile
+  google_maps_flutter_web: ^0.5.10+1  # Per l'integrazione di Google Maps su web
+  geolocator: ^9.0.0            # Per ottenere la posizione corrente
 
 dev_dependencies:
   flutter_test:
