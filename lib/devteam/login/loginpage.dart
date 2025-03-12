@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:prima_applicazione/MyButton.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -77,30 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  MyButton(
-                      onPressed: _decrementCounter,
-                      child: const Icon(Icons.accessibility)
-                  ),
                   const SizedBox(width: 20),
-                  MyButton(
-                      onPressed: _resetCountet,
-                      child: const Icon(Icons.lock_reset)
-                  ),
-                  const SizedBox(width: 20),
-                  MyButton(
-                    onPressed: _incrementCounter,
-                    child: const Icon(Icons.add),
-                  ),
-                  const SizedBox(width: 20),
-                  MyButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const MyHomePage(title: "Title"))
-                        );
-                      },
-                      child: const Icon(Icons.backspace)
-                  )
                 ],
               )
             ],

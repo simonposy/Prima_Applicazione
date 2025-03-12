@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prima_applicazione/codegenius//DoctorLogin.dart';
+import 'package:prima_applicazione/codegenius/DoctorLogin.dart';
 import 'package:prima_applicazione/codegenius/GoogleAccessRegistration.dart';
 
 class LoginSelector extends StatefulWidget {
@@ -23,91 +23,91 @@ class _LoginSelectorState extends State<LoginSelector> {
             SizedBox(height: 10),
             Center(
                 child: Column(children: [
-                  SizedBox(height: 20),
-                  SizedBox(
-                      width: 350,
-                      child: Column(children: [
-                        Container(
-                            width: 250,
-                            decoration: new BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.circular(12),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 3,
-                                  blurRadius: 5,
-                                  offset:
+              SizedBox(height: 20),
+              SizedBox(
+                  width: 350,
+                  child: Column(children: [
+                    Container(
+                        width: 250,
+                        decoration: new BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 3,
+                              blurRadius: 5,
+                              offset:
                                   Offset(3, 3),
-                                ),
-                              ],
                             ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  "Login Utente",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                SizedBox(height: 10),
-                                TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => const GoogleAccessRegistration())
-                                    );
-                                  },
-                                  style: ButtonStyle(
-                                      backgroundColor:
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              "Login Utente",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 10),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const GoogleAccessRegistration())
+                                );
+                              },
+                              style: ButtonStyle(
+                                  backgroundColor:
                                       MaterialStateProperty.all<Color>(
                                           Colors.red)),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Text(
-                                        " Utente ",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => const DoctorLogin())
-                                    );
-                                  },
-                                  style: ButtonStyle(
-                                      backgroundColor:
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    " Utente ",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const DoctorLogin())
+                                );
+                              },
+                              style: ButtonStyle(
+                                  backgroundColor:
                                       MaterialStateProperty.all<Color>(
                                           Colors.red)),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Text(
-                                        "Dottore",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 30),
-                              ],
-                            ))
-                      ]))
-                ]))
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    "Dottore",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 30),
+                          ],
+                        ))
+                  ]))
+            ]))
           ],
         ));
   }

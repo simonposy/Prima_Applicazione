@@ -12,12 +12,14 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Android, build-name is used as versionName while build-number used as versionCode.
 # Read more about Android versioning at https://developer.android.com/studio/publish/versioning
 # In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.2  # Verifica la versione di Dart in base alla tua versione di Flutter
+  sdk: ^3.6.2
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -32,8 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  firebase_core: ^3.12.1  # Necessario per l'inizializzazione di Firebase
-  firebase_auth: ^5.5.1   # Per l'autenticazione con Firebase
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
   google_maps_flutter: ^2.10.1  # Per l'integrazione di Google Maps su mobile
   google_maps_flutter_web: ^0.5.10+1  # Per l'integrazione di Google Maps su web
   geolocator: ^9.0.0            # Per ottenere la posizione corrente
@@ -59,12 +61,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
     - assets/codegenius/
-  # Assicurati che la cartella assets esista e contenga i file necessari
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -89,5 +89,5 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package dependencies, see
-  # https://flutter.dev/custom-fonts
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package

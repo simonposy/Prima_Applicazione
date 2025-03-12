@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:prima_applicazione/MyButton.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:prima_applicazione/login/loginpage.dart';
-import 'devteam/profilo.dart';
+import 'package:prima_applicazione/devteam/Home/homepage.dart';
+import 'package:prima_applicazione/devteam/Home/myButton.dart';
+import 'package:prima_applicazione/devteam/login/loginpage.dart';
+import 'codegenius/Home.dart';
+import 'devteam/Profilo/profilo.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'devteam/Home/homepage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'QuickCare'),
+      home: const MyHomePage(title: 'App Sviluppate'),
     );
   }
 }
@@ -37,30 +38,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  void _decrementCounter() {
-    if (_counter>0) {
-      setState(() {
-        _counter--;
-      });
-    } else {
-      print("Errore");
-    }
-  }
-
-  void _resetCountet() {
-    setState(() {
-      _counter=0;
-    });
-
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,51 +46,33 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
         systemOverlayStyle: SystemUiOverlayStyle.light,
-
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-              style: TextStyle(
-                  color: Colors.red
-              ),
+            MyButton(
+              text: 'iconaAiuto.png',
+              onPressed: () {
+                // Azione da eseguire quando il pulsante viene premuto
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Home())
+                );
+              },
+              name: 'Code Genius',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            MyButton(
+              text: 'iconaAiuto.png',
+              onPressed: () {
+                // Azione da eseguire quando il pulsante viene premuto
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage())
+                );
+              },
+              name: 'Dev Team',
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MyButton(
-                    onPressed: _decrementCounter,
-                    child: const Icon(Icons.accessibility)
-                ),
-                const SizedBox(width: 20),
-                MyButton(
-                    onPressed: _resetCountet,
-                    child: const Icon(Icons.lock_reset)
-                ),
-                const SizedBox(width: 20),
-                MyButton(
-                  onPressed: _incrementCounter,
-                  child: const Icon(Icons.add),
-                ),
-                const SizedBox(width: 20),
-                MyButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const LoginPage())
-                      );
-                    },
-                    child: const Icon(Icons.edit)
-                )
-              ],
-            )
           ],
         ),
       )

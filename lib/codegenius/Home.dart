@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
           children: [
             Positioned(
               child: Image.asset(
-                'assets/codegenius/home.png',
+                'assets/codegenius/home.png', // L'immagine della curva bianca
                 fit: BoxFit.cover,
               ),
             ), // Logo

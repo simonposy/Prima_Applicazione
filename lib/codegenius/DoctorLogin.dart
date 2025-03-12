@@ -35,60 +35,60 @@ class _DoctorLoginState extends State<DoctorLogin> {
                 ),
                 child: Center(
                     child: Column(
-                      children: [
-                        SizedBox(
-                            width: 350,
-                            child: Column(children: [
-                              SizedBox(height: 10),
-                              Text(
-                                "Login Dottore",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                              SizedBox(height: 10),
-                              TextField(
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(),
-                                      hintText: 'Inserisci ID Ospedale...',
-                                      suffixIcon: Icon(
-                                        Icons.edit,
-                                        color: Colors.red,
-                                      ))),
-                              SizedBox(height: 10),
-                              TextField(
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(),
-                                      hintText: 'Inserisci username...',
-                                      suffixIcon: Icon(
-                                        Icons.edit,
-                                        color: Colors.red,
-                                      ))),
-                              SizedBox(height: 10),
-                              TextField(
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(),
-                                      hintText: 'Inserisci password...',
-                                      suffixIcon: Icon(
-                                        Icons.edit,
-                                        color: Colors.red,
-                                      ))),
-                              SizedBox(height: 20),
-                              ElevatedButton(
-                                  style: ButtonStyle(
-                                      backgroundColor:
+                  children: [
+                    SizedBox(
+                        width: 350,
+                        child: Column(children: [
+                          SizedBox(height: 10),
+                          Text(
+                            "Login Dottore",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          SizedBox(height: 10),
+                          TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Inserisci ID Ospedale...',
+                                  suffixIcon: Icon(
+                                    Icons.edit,
+                                    color: Colors.red,
+                                  ))),
+                          SizedBox(height: 10),
+                          TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Inserisci username...',
+                                  suffixIcon: Icon(
+                                    Icons.edit,
+                                    color: Colors.red,
+                                  ))),
+                          SizedBox(height: 10),
+                          TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Inserisci password...',
+                                  suffixIcon: Icon(
+                                    Icons.edit,
+                                    color: Colors.red,
+                                  ))),
+                          SizedBox(height: 20),
+                          ElevatedButton(
+                              style: ButtonStyle(
+                                  backgroundColor:
                                       WidgetStatePropertyAll(Colors.white60)),
-                                  onPressed: () => print(""),
-                                  child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text("Login",
-                                            style:
+                              onPressed: () => print(""),
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("Login",
+                                        style:
                                             TextStyle(fontWeight: FontWeight.bold,color: Colors.redAccent))
-                                      ])),
-                              SizedBox(height: 20)
-                            ]))
-                      ],
-                    ))),
+                                  ])),
+                          SizedBox(height: 20)
+                        ]))
+                  ],
+                ))),
           )
         ]));
   }
